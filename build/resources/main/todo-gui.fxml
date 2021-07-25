@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="ucf.assignments.Controller">
+    <children>
+        <MenuBar VBox.vgrow="NEVER">
+            <menus>
+                <Menu mnemonicParsing="false" text="File">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Open List…" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" text="Close" />
+                        <MenuItem mnemonicParsing="false" text="Save List" />
+                        <MenuItem mnemonicParsing="false" text="Save List As…" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" text="Quit" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Create List" />
+            </menus>
+        </MenuBar>
+        <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+            <children>
+                <Label alignment="CENTER" layoutX="155.0" layoutY="177.0" style="&#10;" text="Drag components from Library here…" textAlignment="CENTER" textFill="#9f9f9f" wrapText="false">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Label>
+                <TitledPane animated="false" text="ToDo List #1">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="647.0">
+                            <children>
+                                <TabPane layoutX="65.0" layoutY="55.0" prefHeight="45.0" prefWidth="457.0" tabClosingPolicy="UNAVAILABLE" />
+                                <CheckBox layoutY="5.0" mnemonicParsing="false" text="Feed the dog today" />
+                                <CheckBox layoutY="30.0" mnemonicParsing="false" text="Go to work" />
+                                <Button layoutX="544.0" layoutY="142.0" mnemonicParsing="false" text="Delete Item" />
+                                <Button layoutX="14.0" layoutY="142.0" mnemonicParsing="false" text="Edit Item" />
+                                <Button layoutX="281.0" layoutY="142.0" mnemonicParsing="false" text="Add Item" />
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </TitledPane>
+                <Button layoutX="27.0" layoutY="259.0" mnemonicParsing="false" prefHeight="69.0" prefWidth="144.0" text="Add New List" />
+                <Button layoutX="253.0" layoutY="259.0" mnemonicParsing="false" prefHeight="69.0" prefWidth="144.0" text="Close List" />
+                <Button layoutX="491.0" layoutY="259.0" mnemonicParsing="false" prefHeight="69.0" prefWidth="144.0" text="Delete List" />
+            </children>
+        </AnchorPane>
+    </children>
+</VBox>
