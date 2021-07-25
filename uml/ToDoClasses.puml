@@ -1,0 +1,49 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class Item {
+    complete : boolean
+    text : String
+    date : String
+
+    setComplete()
+    isComplete()
+    setText()
+    setDate()
+    getText()
+    getDate()
+}
+
+class ToDoList {
+    name : String
+    items : List<Item>
+
+    setTitle()
+    getTitle()
+    setItem(item, index)
+    getItem(index)
+
+    addItem(item)
+    removeItem(item)
+    displayList(filter)
+}
+
+class ToDoListCollection {
+    lists : List<ToDoList>
+
+    addList(list)
+    removeList(list)
+
+    saveList()
+    loadList(file)
+}
+
+enum Filter {
+    ALL
+    COMPLETE
+    INCOMPLETE
+}
+
+ToDoList <|-- Item
+ToDoListCollection <|-- ToDoList
+@enduml
